@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+
+require 'json'
+
+def main
+  loop do
+    # Read message
+    message = JSON.parse read
+    command = message['command']
+    # Send response
+    response = `#{command}`
+    message[:response] = response
+    send message.to_json
+  end
+end
+
+def read
+  # Read the message length (first 4 bytes)
+  text_length_bytes = STDIN.read 4
+  exit if text_length_bytes.length.zero?
+  # Unpack message length as 4 byte integer
+  text_length = text_length_bytes.unpack('i').first
+  # Read the text (JSON object) of the message
+  text = STDIN.read text_length
+end
+
+
+def send message
+  # Write message size
+  STDOUT.write [message.length].pack('I')
+  # Write the message itself
+  STDOUT.write message
+  STDOUT.flush
+end
+
+main
