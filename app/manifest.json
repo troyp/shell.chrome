@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "shell",
+  "name": "Shell",
   "description": "Chrome extension library to execute shell commands",
   "homepage_url": "https://github.com/alexherbo2/shell.chrome",
   "version": "1",
