@@ -27,7 +27,7 @@ end
 
 def send message
   # Write message size
-  STDOUT.write [message.length].pack('I')
+  STDOUT.write [message.bytes.size].pack('I')
   # Write the message itself
   STDOUT.write message
   STDOUT.flush
