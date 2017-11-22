@@ -32,6 +32,29 @@ Open <chrome://extensions> in your browser, enable _Developer mode_ then
 }
 ```
 
+API
+---
+
+### Message
+
+``` json
+{
+  command: <command>
+}
+```
+
+### Response
+
+``` json
+{
+  stdin: <stdin>,
+  stdout: <stdout>,
+  stderr: <stderr>,
+  status: <status>,
+  <message>
+}
+```
+
 Examples
 --------
 
@@ -53,7 +76,7 @@ Receive response:
 
 ``` javascript
 port.onMessage.addListener((message) => {
-  console.log(message.response)
+  console.log(message)
 })
 ```
 

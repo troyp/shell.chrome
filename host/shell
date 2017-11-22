@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require 'open3'
 require 'json'
 
 def main
@@ -8,8 +9,13 @@ def main
     message = JSON.parse read
     command = message['command']
     # Send response
-    response = `#{command}`
-    message[:response] = response
+    stdin, stdout, stderr, thread = Open3.popen3(command, chdir: Dir.home)
+    message[:stdin] = stdin.stat.size.zero? \
+      ? ''
+      : stdin.read
+    message[:stdout] = stdout.read
+    message[:stderr] = stderr.read
+    message[:status] = thread.value.to_i
     send message.to_json
   end
 end
