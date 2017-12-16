@@ -18,6 +18,9 @@ Open <chrome://extensions> in your browser, enable _Developer mode_ then
 
 - [Native messaging host location][]
 
+The [location of the native manifest][Native messaging host location] depends on
+the version of Chrome ([Chromium][], [Google Chrome][]) and operating system.
+
 `shell.json`
 
 ``` json
@@ -81,6 +84,8 @@ port.onMessage.addListener((message) => {
 ```
 
 [Ruby]: https://ruby-lang.org
+[Chromium]: https://chromium.org
+[Google Chrome]: https://google.com/chrome
 [Native Messaging]: https://developer.chrome.com/extensions/nativeMessaging
 [Native messaging host location]: https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location
 [Cross-extension messaging]: https://developer.chrome.com/extensions/messaging#external
