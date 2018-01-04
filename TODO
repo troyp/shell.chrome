@@ -1,3 +1,5 @@
 Use Promise-based WebExtension API
 – https://github.com/mozilla/webextension-polyfill
 – https://unpkg.com/webextension-polyfill
+Rewrite in Crystal
+https://crystal-lang.org
