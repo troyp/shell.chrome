@@ -1,13 +1,11 @@
 Chrome extension library to execute shell commands
 through [native messaging][Native Messaging].
 
-Dependencies
-------------
+## Dependencies
 
 - [Ruby][]
 
-Installation
-------------
+## Installation
 
 ### Load the extension
 
@@ -35,8 +33,7 @@ the version of Chrome ([Chromium][], [Google Chrome][]) and operating system.
 }
 ```
 
-API
----
+## API
 
 ### Message
 
@@ -58,8 +55,7 @@ API
 }
 ```
 
-Examples
---------
+## Examples
 
 - [Cross-extension messaging][]
 
