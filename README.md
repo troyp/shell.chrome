@@ -1,5 +1,9 @@
-Chrome extension library to execute shell commands
-through [native messaging][Native Messaging].
+# Shell
+
+###### [Usage](#examples) | [Documentation](#api) | [Contributing](CONTRIBUTING)
+
+> [Chrome][Chromium] extension library to execute shell commands
+> through [native messaging][Native Messaging].
 
 ## Dependencies
 
