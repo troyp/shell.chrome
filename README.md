@@ -7,7 +7,7 @@
 
 ## Dependencies
 
-- [Ruby][]
+- [Ruby]
 
 ## Installation
 
@@ -18,10 +18,10 @@ Open <chrome://extensions> in your browser, enable _Developer mode_ then
 
 ### Install the manifest
 
-- [Native messaging host location][]
+- [Native messaging host location]
 
 The [location of the native manifest][Native messaging host location] depends on
-the version of Chrome ([Chromium][], [Google Chrome][]) and operating system.
+the version of Chrome ([Chromium], [Google Chrome]) and operating system.
 
 `shell.json`
 
@@ -61,7 +61,7 @@ the version of Chrome ([Chromium][], [Google Chrome][]) and operating system.
 
 ## Examples
 
-- [Cross-extension messaging][]
+- [Cross-extension messaging]
 
 Connect extension:
 
